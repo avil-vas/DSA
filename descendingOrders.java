@@ -60,7 +60,7 @@ public class descendingOrders {
         }
         //sorting
         int j=0;
-        for(int i=0;i<count.length;i++){
+        for(int i=count.length-1;i>=0;i--){
 
             while(count[i]>0){
                 a[j]=i;
@@ -79,7 +79,7 @@ public class descendingOrders {
         Integer a[]={1,5,3,4,2,2,1,3,4,5,9};//this i used only to match the collections.order() because it doesnot work on primitive array means the array defined with primitive data type like int a[] 
         // bubbleSort(a);
         // selctionSort(a);
-        insertionSort(a);
+        // insertionSort(a);
         // Arrays.sort(a);//Sorts in ascending order
         // Arrays.sort(a,0,3);//Sorts elements from 0 to 2nd index
 
@@ -91,7 +91,7 @@ public class descendingOrders {
 
         //CountSort
 
-        // countSort(a);
+        countSort(a);
 
 
         printArr(a);
