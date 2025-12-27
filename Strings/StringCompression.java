@@ -1,4 +1,5 @@
-package Strings;
+import java.util.*;
+
 public class StringCompression{
 
     public static String stringCompression(String str){
@@ -21,9 +22,36 @@ public class StringCompression{
         }
         return sb.toString();
     } 
+
+    public static boolean  isAnagram(String str1,String str2){
+
+        if(str1.length()!=str2.length()){
+            return false;
+        }
+        char ch[]=str1.toCharArray();
+        Arrays.sort(ch);
+
+        char ch1[]=str2.toCharArray();
+        Arrays.sort(ch1);
+       
+        if(Arrays.equals(ch,ch1)){
+            return true;
+            
+        }
+     
+        return false; 
+    }
     public static void main(String[] args) {
         String str="aaabbccccc";
         System.out.println(stringCompression(str));
+        // String str1=str.replace('a', 'e');
+        // String str2=str.replace("aa", "kk");
+         
+        
+        // System.out.println(str1);
+        //   System.out.println(str2);
+        
+        System.out.println(isAnagram("race","care"));
         
     }
 }
